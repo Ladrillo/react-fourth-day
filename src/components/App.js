@@ -82,7 +82,10 @@ function Market() {
   return (
     <div className="App">
       <span className="error">{error}</span>
-      <ItemsList items={stock.fruits.concat(stock.meats)} addToCart={addToCart} />
+      <ItemsList
+        items={stock.fruits.concat(stock.meats)}
+        addToCart={addToCart}
+      />
       <Cart items={cart} />
     </div>
   );
