@@ -1,10 +1,10 @@
 import React from 'react';
-
+import st from '../styles';
 // you do this all day long in React Native
 function createStyle(isBold, name) {
   return {
     container: {
-      padding: '5px',
+      padding: st.container.padding,
       margin: '2px',
       border: '2px solid grey',
     },
