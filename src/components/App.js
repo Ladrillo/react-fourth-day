@@ -1,52 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import { Cart, ItemsList } from './Components';
 import './App.css';
 
 const fruitsApi = 'http://localhost:4000/market/fruits';
 const meatsApi = 'http://localhost:4000/market/meats';
-
-function ItemDisplay(props) { // PULL OUT OF HERE!
-  const { name, action } = props;
-  return (
-    <div className="item-display">
-      <span>{name}</span>
-      <button onClick={evt => action(name)}>Add Item to Cart</button>
-    </div>
-  );
-}
-
-function ItemsList(props) { // PULL OUT OF HERE!
-  const { items, addToCart } = props;
-  return (
-    <div className="items-list">
-      <h4>Stock:</h4>
-      {
-        items.map(
-          (itemName) => (
-            <ItemDisplay
-              key={itemName}
-              name={itemName}
-              action={addToCart}
-            />
-          ))
-      }
-    </div>
-  )
-}
-
-function Cart(props) { // PULL OUT OF HERE!
-  const { items } = props;
-  return (
-    <div className="cart">
-      <h4>Cart:</h4>
-      {
-        items.length
-          ? items.map((item, idx) => <div key={idx}>{item}</div>)
-          : <h5>Nothing in the cart. Sad!</h5>
-      }
-    </div>
-  )
-}
 
 function Market() {
   // slices of state
