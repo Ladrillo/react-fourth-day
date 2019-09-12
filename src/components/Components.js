@@ -31,11 +31,23 @@ import styled from 'styled-components';
 //   );
 // }
 
+const bigPadding = '4px';
+
 const StyledItemDisplay = styled.div`
-  padding: 3px;
+  padding: ${bigPadding};
   margin: 2px;
   border: 2px solid grey;
   border-radius: 4px;
+
+  span {
+    color: purple;
+    margin-right: 5px;
+
+    &:hover {
+      color: green;
+      font-weight: bold;
+    }
+  }
 `
 
 export function ItemDisplay(props) {
