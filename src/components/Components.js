@@ -1,5 +1,6 @@
 import React from 'react';
-import st from '../styles';
+import styled from 'styled-components';
+// import st from '../styles';
 // you do this all day long in React Native
 // function createStyle(isBold, name) {
 //   return {
@@ -59,6 +60,8 @@ export function ItemsList(props) {
     </div>
   )
 }
+
+const StyledH5 = styled.h5``;
 
 export function Cart(props) {
   const { items } = props;
