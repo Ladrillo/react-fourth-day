@@ -20,6 +20,7 @@ function createStyle(isBold, name) {
 }
 
 export function ItemDisplay(props) {
+  debugger
   const { name, action, isBold } = props;
   const styles = createStyle(isBold, name);
   return (
