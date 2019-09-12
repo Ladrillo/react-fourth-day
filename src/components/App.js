@@ -6,11 +6,11 @@ const fruitsApi = 'http://localhost:4000/market/fruits';
 const meatsApi = 'http://localhost:4000/market/meats';
 
 function ItemDisplay(props) {
-  const { name, addToCart } = props;
+  const { name, action } = props;
   return (
     <div className="item-display">
       <span>{name}</span>
-      <button onClick={evt => addToCart(name)}>Add Item to Cart</button>
+      <button onClick={evt => action(name)}>Add Item to Cart</button>
     </div>
   );
 }
@@ -25,7 +25,7 @@ function ItemsList(props) {
             <ItemDisplay
               key={itemName}
               name={itemName}
-              addToCart={addToCart}
+              action={addToCart}
             />
           ))
       }
