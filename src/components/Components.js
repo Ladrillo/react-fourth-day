@@ -17,17 +17,18 @@ function createStyle() {
   };
 }
 
-export function ItemDisplay(props) { // PULL OUT OF HERE!
+export function ItemDisplay(props) {
   const { name, action } = props;
+  const styles = createStyle();
   return (
-    <div className="item-display">
-      <span>{name}</span>
-      <button onClick={evt => action(name)}>Add Item to Cart</button>
+    <div style={styles.container} className="item-display">
+      <span style={styles.span}>{name}</span>
+      <button style={styles.button} onClick={evt => action(name)}>Add Item to Cart</button>
     </div>
   );
 }
 
-export function ItemsList(props) { // PULL OUT OF HERE!
+export function ItemsList(props) {
   const { items, addToCart } = props;
   return (
     <div className="items-list">
@@ -46,7 +47,7 @@ export function ItemsList(props) { // PULL OUT OF HERE!
   )
 }
 
-export function Cart(props) { // PULL OUT OF HERE!
+export function Cart(props) {
   const { items } = props;
   return (
     <div className="cart">
