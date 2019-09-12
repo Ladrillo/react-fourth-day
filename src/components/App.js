@@ -19,6 +19,7 @@ function ItemsList(props) {
   const { items, addToCart } = props;
   return (
     <div className="items-list">
+      <h4>Stock:</h4>
       {
         items.map(
           (itemName) => (
@@ -81,9 +82,7 @@ function Market() {
   return (
     <div className="App">
       <span className="error">{error}</span>
-      <h4>Stock:</h4>
-      <ItemsList items={stock.fruits} addToCart={addToCart} />
-      <ItemsList items={stock.meats} addToCart={addToCart} />
+      <ItemsList items={stock.fruits.concat(stock.meats)} addToCart={addToCart} />
       <Cart items={cart} />
     </div>
   );
