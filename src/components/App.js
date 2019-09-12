@@ -5,7 +5,7 @@ import './App.css';
 const fruitsApi = 'http://localhost:4000/market/fruits';
 const meatsApi = 'http://localhost:4000/market/meats';
 
-function ItemDisplay(props) {
+function ItemDisplay(props) { // PULL OUT OF HERE!
   const { name, action } = props;
   return (
     <div className="item-display">
@@ -15,7 +15,7 @@ function ItemDisplay(props) {
   );
 }
 
-function ItemsList(props) {
+function ItemsList(props) { // PULL OUT OF HERE!
   const { items, addToCart } = props;
   return (
     <div className="items-list">
@@ -34,7 +34,7 @@ function ItemsList(props) {
   )
 }
 
-function Cart(props) {
+function Cart(props) { // PULL OUT OF HERE!
   const { items } = props;
   return (
     <div className="cart">
