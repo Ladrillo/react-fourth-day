@@ -1,31 +1,41 @@
 import React from 'react';
 import st from '../styles';
 // you do this all day long in React Native
-function createStyle(isBold, name) {
-  return {
-    container: {
-      padding: st.container.padding,
-      margin: '2px',
-      border: '2px solid grey',
-    },
-    span: {
-      color: name.length % 2 === 0 ? 'blue' : 'red',
-      fontWeight: isBold ? 'bold' : 'initial'
-    },
-    button: {
-      border: '1px solid grey',
-      borderRadius: '4px',
-    },
-  };
-}
+// function createStyle(isBold, name) {
+//   return {
+//     container: {
+//       padding: st.container.padding,
+//       margin: '2px',
+//       border: '2px solid grey',
+//     },
+//     span: {
+//       color: name.length % 2 === 0 ? 'blue' : 'red',
+//       fontWeight: isBold ? 'bold' : 'initial'
+//     },
+//     button: {
+//       border: '1px solid grey',
+//       borderRadius: '4px',
+//     },
+//   };
+// }
+
+// export function ItemDisplay(props) {
+//   const { name, action, isBold } = props;
+//   const styles = createStyle(isBold, name);
+//   return (
+//     <div style={styles.container} className="item-display">
+//       <span style={styles.span}>{name}</span>
+//       <button style={styles.button} onClick={evt => action(name)}>Add Item to Cart</button>
+//     </div>
+//   );
+// }
 
 export function ItemDisplay(props) {
-  const { name, action, isBold } = props;
-  const styles = createStyle(isBold, name);
+  const { name, action } = props;
   return (
-    <div style={styles.container} className="item-display">
-      <span style={styles.span}>{name}</span>
-      <button style={styles.button} onClick={evt => action(name)}>Add Item to Cart</button>
+    <div className="item-display">
+      <span>{name}</span>
+      <button onClick={evt => action(name)}>Add Item to Cart</button>
     </div>
   );
 }
