@@ -1,7 +1,7 @@
 import React from 'react';
 
 // you do this all day long in React Native
-function createStyle(isBold) {
+function createStyle(isBold, name) {
   return {
     container: {
       padding: '5px',
@@ -9,7 +9,7 @@ function createStyle(isBold) {
       border: '2px solid grey',
     },
     span: {
-      color: 'blue',
+      color: name.length % 2 === 0 ? 'blue' : 'red',
       fontWeight: isBold ? 'bold' : 'initial'
     },
     button: {
@@ -21,7 +21,7 @@ function createStyle(isBold) {
 
 export function ItemDisplay(props) {
   const { name, action, isBold } = props;
-  const styles = createStyle(isBold);
+  const styles = createStyle(isBold, name);
   return (
     <div style={styles.container} className="item-display">
       <span style={styles.span}>{name}</span>
