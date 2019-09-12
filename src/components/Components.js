@@ -31,13 +31,20 @@ import styled from 'styled-components';
 //   );
 // }
 
+const StyledItemDisplay = styled.div`
+  padding: 3px;
+  margin: 2px;
+  border: 2px solid grey;
+  border-radius: 4px;
+`
+
 export function ItemDisplay(props) {
   const { name, action } = props;
   return (
-    <div className="item-display">
+    <StyledItemDisplay className="item-display">
       <span>{name}</span>
       <button onClick={evt => action(name)}>Add Item to Cart</button>
-    </div>
+    </StyledItemDisplay>
   );
 }
 
