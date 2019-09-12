@@ -42,7 +42,7 @@ const StyledItemDisplay = styled.div`
   span {
     color: purple;
     margin-right: 5px;
-
+    font-weight: ${props => props.bold ? 'bold' : 'initial'};
     &:hover {
       color: green;
       font-weight: bold;
@@ -53,7 +53,7 @@ const StyledItemDisplay = styled.div`
 export function ItemDisplay(props) {
   const { name, action } = props;
   return (
-    <StyledItemDisplay className="item-display">
+    <StyledItemDisplay bold className="item-display">
       <span>{name}</span>
       <button onClick={evt => action(name)}>Add Item to Cart</button>
     </StyledItemDisplay>
