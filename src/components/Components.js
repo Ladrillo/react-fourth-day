@@ -1,5 +1,19 @@
 import React from 'react';
 
+function createStyle() {
+  return {
+    container: {
+
+    },
+    span: {
+
+    },
+    button: {
+
+    },
+  }
+}
+
 export function ItemDisplay(props) { // PULL OUT OF HERE!
   const { name, action } = props;
   return (
