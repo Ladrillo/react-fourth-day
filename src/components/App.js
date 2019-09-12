@@ -37,11 +37,11 @@ function Cart(props) {
   const { items } = props;
   return (
     <div className="cart">
-      <h3>Cart:</h3>
+      <h4>Cart:</h4>
       {
         items.length
           ? items.map((item, idx) => <div key={idx}>{item}</div>)
-          : <div>Nothing in the cart. Sad!</div>
+          : <h5>Nothing in the cart. Sad!</h5>
       }
     </div>
   )
@@ -81,6 +81,7 @@ function Market() {
   return (
     <div className="App">
       <span className="error">{error}</span>
+      <h4>Stock:</h4>
       <ItemsList items={stock.fruits} addToCart={addToCart} />
       <ItemsList items={stock.meats} addToCart={addToCart} />
       <Cart items={cart} />
