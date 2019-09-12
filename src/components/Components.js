@@ -61,7 +61,16 @@ export function ItemsList(props) {
   )
 }
 
-const StyledH5 = styled.h5``;
+// styled is imported at the top
+// we can use actual CSS syntax
+// but it's still all JS
+// no inline styles
+// the lib splaps very unique classnames to the elements
+// a style tag gets injected to the page with CSS rules
+// targeting those very unique classnames
+const StyledH5 = styled.h5`
+  color: red;
+`;
 
 export function Cart(props) {
   const { items } = props;
@@ -71,7 +80,7 @@ export function Cart(props) {
       {
         items.length
           ? items.map((item, idx) => <div key={idx}>{item}</div>)
-          : <h5>Nothing in the cart. Sad!</h5>
+          : <StyledH5>Nothing in the cart. Sad!</StyledH5>
       }
     </div>
   )
