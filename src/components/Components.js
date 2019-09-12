@@ -72,11 +72,17 @@ const StyledH5 = styled.h5`
   color: red;
 `;
 
+const StyledH4 = styled.h4`
+  font-weight: bold;
+  color: green;
+  font-style: italic;
+`
+
 export function Cart(props) {
   const { items } = props;
   return (
     <div className="cart">
-      <h4>Cart:</h4>
+      <StyledH4>Cart:</StyledH4>
       {
         items.length
           ? items.map((item, idx) => <div key={idx}>{item}</div>)
