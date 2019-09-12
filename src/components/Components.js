@@ -3,15 +3,18 @@ import React from 'react';
 function createStyle() {
   return {
     container: {
-
+      padding: '5px',
+      margin: '2px',
+      border: '2px solid grey',
     },
     span: {
-
+      color: 'blue'
     },
     button: {
-
+      border: '1px solid grey',
+      borderRadius: '4px',
     },
-  }
+  };
 }
 
 export function ItemDisplay(props) { // PULL OUT OF HERE!
